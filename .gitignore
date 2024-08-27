@@ -31,3 +31,6 @@ assets/js/dist
 ._.DS_Store
 **/.DS_Store
 **/._.DS_Store
+
+# Obsidian
+.obsidian/
