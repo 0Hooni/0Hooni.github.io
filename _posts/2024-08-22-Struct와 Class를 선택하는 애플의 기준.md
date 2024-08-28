@@ -42,6 +42,6 @@ Class는 기본적으로 참조 타입이기 때문에 Identity에 대한 정보
 
 # 🔗 레퍼런스
 > **해당 자료를 찾아보며 도움이 됐던 링크**
-> - [Choosing Between Structures and Classes | Apple Developer Documentation](https://developer.apple.com/documentation/swift/choosing-between-structures-and-classes)
+> - [Choosing Between Structures and Classes \| Apple Developer Documentation](https://developer.apple.com/documentation/swift/choosing-between-structures-and-classes)
 > - [[Swift] Class와 Struct의 차이점?](https://icksw.tistory.com/256)
 > - [[Swift] 싱글톤 패턴에서 구조체와 클래스의 차이](https://so-kyte.tistory.com/169)
