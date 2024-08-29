@@ -54,37 +54,45 @@ tags:
 - ViewController의 인스턴스를 초기화할 때 호출
 - 객체가 생성될 때 필요한 초기 설정을 할 때 사용
 - nibName과 bundle을 받는 생성자는 인터페이스 빌더 파일을 사용해서 ViewController를 초기화 할 때 사용
+
 #### [loadView](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621454-loadview)
 - ViewController의 View 계층을 메모리에 로드하는 함수
 - 일반적으로는 시스템이 자동으로 loadView를 함
 - 직접 호출할 경우 검은 화면을 띄움
 - 대신 override 하는것은 가능함
+
 #### [viewDidLoad](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621495-viewdidload)
 - ViewController의 View가 메모리에 로드된 후 호출
 - 보통 View의 초기 설정을 할 때 사용
+
 #### [viewWillAppear](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621510-viewwillappear)
 - View가 화면에 나타나기 직전에 호출
 - View가 표시될 준비를 할 때 주로 사용
+
 #### [viewIsAppearing](https://developer.apple.com/documentation/uikit/uiviewcontroller/4195485-viewisappearing)
 - viewWillAppear과 viewDidAppear 사이에 호출
 - viewWillAppear는 단순히 View가 추가될 예정을 알리는 메소드이지만 타이밍이 정확하지 않다는 점이 있음
 - 하지만 viewIsAppearing은 superView가 View의 배치를 끝낸 뒤 호출되기에 View geomerty를 정확히 파악할 수 있음
 - View가 보일 때 UI를 업데이트 하기 위한 최적의 장소
+
 #### [viewDidAppear](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621423-viewdidappear)
 - View가 화면에 완전히 나타난 후 호출
-화면이 나타난 후 추가 작업을 할 때 사용
+- 화면이 나타난 후 추가 작업을 할 때 사용
+
 #### [viewWillDisappear](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621485-viewwilldisappear)
 - View가 화면에서 사라지기 직전에 호출
 - View가 사라질 때 필요한 정리 작업을 할 때 사용
+
 #### [viewDidDisappear](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621477-viewdiddisappear)
 - View가 화면에서 완전히 사라진 후 호출
 - View가 사라진 후 추가적인 작업을 수행할 때 사용
+
 #### [viewDidUnload](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621383-viewdidunload)
 - iOS6 이전 버전에서 메모리 경고를 처리하기 위해 사용
 - 메모리 부족으로 인해 View를 메모리에서 해제할 때 호출
 - 현재는 더이상 사용되지 않고, 대신 [didReceiveMemoryWarning()](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621409-didreceivememorywarning) 메소드를 이용해 메모리 경고를 처리하는 방법이 변경
-    
-    
+
+
 ## 📞 해당 메소드들은 언제 콜백이 되는것일까?
 생명주기에 대해 학습하던중 도대체 이 메소드들을 `UIViewController`가 콜백하는지 알고싶어졌다. 분명 `UIViewController`도 해당 `ViewCycleMethod`를 특정 트리거에 의해 호출되는 시점이 있을것이라 생각하는데, 열심히 찾아보면 결국 **"UIViewController가 자동으로 인지해서 호출한다"**로 귀결이 되서 열심히 찾아봤다.
 
