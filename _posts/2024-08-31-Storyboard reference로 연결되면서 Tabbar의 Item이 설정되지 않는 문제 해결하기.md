@@ -125,11 +125,20 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
 사실 처음에는 하위 `ViewController`에 자동적으로 생성되지 않는 `TabbarItem`의 문제라고 생각했고, 이 문제로 탭바에서 하위 tabbar에 대한 참조가 없어서 제대로 값이 들어가지 않는 것이라 생각했다.
 
 하지만 이것보다는 `Storyboard reference`로 구성하게 되면서 **View가 보여지는 시점**이 바뀌게 되었고, 이 문제로 인해서 제대로 View에 보여지지 않게 되는 것이었다.
+
+객체가 `init`됐다면 인스턴스값에 할당을 해줘도 될 것이라 생각한다. 실제로 우리가 어떠한 인스턴스를 생성한 이후부터는 별일 없다면 할당할때 문제가 없었으니까.
+
+**하지만 View의 경우는 달랐다.**
+
+View가 전부 그려지기 전까진 그 어떤 값도 어떻게 될지 모르게 되는 것이다. 실제로 `AutoLayout`의 `Contraint`같은 경우도 [viewWillAppear()](https://developer.apple.com/documentation/appkit/nsviewcontroller/1434415-viewwillappear/) 시점까지도 잘 모른다.
+
+그래서 [viewIsAppearing(_:)](https://developer.apple.com/documentation/uikit/uiviewcontroller/4195485-viewisappearing/) 라는 메소드도 추가로 생겼지만, 이 시점까지도 완벽하진 않다고 한다.
+
 ## 🧑🏻‍🔧 해결하기
 
-정말 심플하게도 해당 문제를 해결하기 위해서 기존에 `scene(_:willConnectTo:options:)`에서 호출하던 코드를 좀더 뒤 시점으로 미뤄주면 됐다.
+위에서 알아본 사실을 기반하자면 우리가 지금같이 View의 요소를 변경하고 싶다면 적어도 해당 View가 전부 그려진 시점에 실행되는 [viewDidAppear(\_:)](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621423-viewdidappear/), [sceneDidBecomeActive(_:)](https://developer.apple.com/documentation/uikit/uiscenedelegate/3197915-scenedidbecomeactive/) 와 같은 메소드들에서 View의 데이터 변경, 셋팅을 해주는것이 좋다 한다. 
 
-
+확실한것은 AppCycle, ViewCycle에 대해서는 무조건 이른것도, 무조건 늦는것도 좋지 않다는 것이었다. 각각의 설정에 어울리는 ViewCycle이 존재하는것이란거고, 그냥 무작정 `ViewDidLoad()`에 때려넣지는 말자.
 
 
 
