@@ -7,6 +7,7 @@ categories:
 tags:
   - UIKit
   - ViewController
+  - 부스트캠프
 ---
 뷰의 라이프사이클은 앱을 생성할 때 가장 먼저 보이는 것중 하나이다.
 
