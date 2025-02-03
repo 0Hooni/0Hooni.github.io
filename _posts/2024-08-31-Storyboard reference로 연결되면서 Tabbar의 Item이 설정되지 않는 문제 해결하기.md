@@ -9,7 +9,7 @@ tags:
   - Storyboard
   - TroubleShooting
   - ViewController
-  - 부스트캠프
+  - boostcamp
 ---
 팀 동료와 미션 수행한 내용을 공유하는 과정에서 `Stroryboard`도 파일 분리를 할 수 있다는 것을 알게 되었다.
 
