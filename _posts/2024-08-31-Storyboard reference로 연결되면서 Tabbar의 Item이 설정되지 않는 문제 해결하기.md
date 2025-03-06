@@ -11,22 +11,22 @@ tags:
   - ViewController
   - boostcamp
 ---
-팀 동료와 미션 수행한 내용을 공유하는 과정에서 `Stroryboard`도 파일 분리를 할 수 있다는 것을 알게 되었다.
+팀 동료와 미션 수행한 내용을 공유하는 과정에서 스토리보드도 파일 분리를 할 수 있다는 것을 알게 되었다.
 
 그래서 기존에 `Main.storyboard`에서 관리되고 있던 **스토리보드 컴포넌트들을 별도의 파일로 분리**를 했었다.
 
-그런데 이 과정에서 `Tabbar`의 **아이템들을 설정하던 코드가 정상 작동을 하지 않았다.**
+그런데 이 과정에서 Tabbar의 **아이템들을 설정하던 코드가 정상 작동을 하지 않았다.**
 
-이전의 스토리보드는 `Main`에 있고 `하위 ViewController`들이 `Main`의 탭바와 연결될 때 자동적으로 `하위 ViewController`들의 `Tabbar UI`가 추가가 됐었다. 
+이전의 스토리보드는 Main에 있고 하위 ViewController들이 Main의 탭바와 연결될 때 자동적으로 하위 ViewController들의 TabbarView가 추가가 됐었다. 
 
-하지만 `Storyboard reference`로 파일을 나눈 뒤 분리하게 되면 분리된 곳으로 간 `하위 ViewController`들에는 `TabbarController`가 연결됐는지 모르기에 자동적으로 `하위 ViewController`에 `Tabbar UI`가 추가되지 않는다.
+하지만 Storyboard reference로 파일을 나눈 뒤 분리하게 되면 분리된 곳으로 간 하위 ViewController들에는 TabbarController가 연결됐는지 모르기에 자동적으로 하위 ViewController에 TabbarView가 추가되지 않는다.
 
 이유가 이것 때문인지는 모르겠지만 아무튼 이러한 변경으로 인하여 `Tabbar`를 초기화하는 코드가 정상 작동하지 않아서 이 문제를 해결해보며 그 과정을 포스팅으로 기록해보려 한다.
 
 ## ⏮️ 이전까지의 방식
-이전까지는 위에 언급된것 처럼 `Main.storyboard`에서 `하위 ViewController`들을 스토리보드를 통해 연결해주고 있었다.
+이전까지는 위에 언급된것 처럼 `Main.storyboard`에서 하위 ViewController들을 스토리보드를 통해 연결해주고 있었다.
 
-그런 다음 `SceneDelegate`에서 아래와 같은 방식으로 `Tabbar`의 아이템들을 초기화 해줬었다.
+그런 다음 `SceneDelegate`에서 아래와 같은 방식으로 Tabbar의 아이템들을 초기화 해줬었다.
 ```swift
 func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 	guard let _ = (scene as? UIWindowScene) else { return }
@@ -54,11 +54,11 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
 그중 해당 코드가 선언된 메소드(`scene(_:willConnectTo:options:)`)의 역할은 아래와같다.
 - 앱이 UI 인스턴스를 만들거나 복원할 때 호출되는 함수
 - 화면에 앱이 등장했을때 실행됨
-- 해당 메소드가 실핼될때는 아직 `ViewController` 객체들의 `viewDidLoad()`가 호출되지 않는 시점
+- 해당 메소드가 실핼될때는 아직 ViewController 객체들의 `viewDidLoad()`가 호출되지 않는 시점
 
 그러면 일단 내가 원했던 해당 코드의 동작은 앱이 실행될 때 Tabbar의 item들의 인터페이스를 설정하는 것이었고, 호출 타이밍에는 이상이 없다.
 
-아래 코드들 또한 이전의 `Storyboard` 환경에서는 전혀 문제가 없었기에 이부분의 문제는 아닐것이다.
+아래 코드들 또한 이전의 스토리보드 환경에서는 전혀 문제가 없었기에 이부분의 문제는 아닐것이다.
 ## 🔄 변화된 것들
 
 
@@ -69,7 +69,7 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
 
 
 
-위와 같이 하나의 파일에서 처리하던 `Storyboard`의 컴포넌트들을 `Storyboard reference`로 나눠서 연결을 해주었다.
+위와 같이 하나의 파일에서 처리하던 스토리보드의 컴포넌트들을 `Storyboard reference`로 나눠서 연결을 해주었다.
 
 흠.... 뭐가 문제일까...
 
@@ -79,7 +79,7 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
 
 그렇다면 문제가 생기는것은 UI가 업데이트 되지 않는다는것
 
-이 메소드가 끝나기 전에 UI가 업데이트가 이미 끝나버린것 아닐까? 하며 SceneDelegate의 함수가 끝나는 시점에 `print`도 찍어보고, `tabbar`의 `viewDidLoad()`, `첫번째 ViewController`의 `viewDidLoad()`도 모두 찍어봤지만 당연하게도 해당 탭바 설정 코드가 이들보다 더 먼저 시작해서 잘 끝난다.
+이 메소드가 끝나기 전에 UI가 업데이트가 이미 끝나버린것 아닐까? 하며 SceneDelegate의 함수가 끝나는 시점에 print도 찍어보고, tabbar의 `viewDidLoad()`, 첫번째 ViewController의 `viewDidLoad()`도 모두 찍어봤지만 당연하게도 해당 탭바 설정 코드가 이들보다 더 먼저 시작해서 잘 끝난다.
 
 ## 💡 문제점 발견
 **드디어 찾았다 ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ**
@@ -88,7 +88,7 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
 
 ![](assets/img/post/2024/08_31_스토리보드_분리_이전_탭바_설정.png){: w="400"}_스토리보드 분리 이전 상황_
 
-분명 분리 이전에는 `TabbarController`에서 `하위 ViewController`의 탭바를 체크했을 때 속성이 잘 들어갔던것을 볼 수 있다. 
+분명 분리 이전에는 TabbarController에서 하위 ViewController의 탭바를 체크했을 때 속성이 잘 들어갔던것을 볼 수 있다. 
 
 반면에
 
@@ -98,7 +98,7 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
 ![](assets/img/post/2024/08_31_스토리보드_분리_이후_탭바_설정.png){: w="400"}_스토리보드 분리 이후 상황_
 
 
-분리 이후에는 `TabbarViewController`에서 설정은 들어갔지만 `하위 ViewController`들에서는 속성이 들어가있지 않는것을 볼 수 있었다.
+분리 이후에는 TabbarViewController에서 설정은 들어갔지만 하위 ViewController들에서는 속성이 들어가있지 않는것을 볼 수 있었다.
 
 ## 🤔 이유 알기
 시작은 스토리보드 레퍼런스를 분리하면서 일어낫던 것이다.
@@ -107,11 +107,11 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
 
 우선 [UITabBarController \| Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uitabbarcontroller)문서에 의하면 `tabbarItem`을 구성하고 싶다면 꼭 각각의 ViewController에서 UITabbarItem 인스턴스를 만들어줘야된다. 
 
-레퍼런스로 TabbarController과 이어진 하위 ViewController가 있다면 main.storyboard때와는 다르게 자동으로 UITabbarItem이 생성되지 않기에 아이템 설정이 먹지 않았을 수 있다. 
+레퍼런스로 TabbarController과 이어진 하위 ViewController가 있다면 `main.storyboard`때와는 다르게 자동으로 UITabbarItem이 생성되지 않기에 아이템 설정이 먹지 않았을 수 있다. 
 
 위 사진에서 하위 탭바의 아이템의 타이틀이 nil로 뜨던 이유는 이처럼 하위 ViewController에 UITabbarItem 인스턴스가 만들어져있지 않았기 때문이다.
 
-하지만 이를 할당해주더라도 TabbarItem의 `title`은 여전히 세팅이 되지 않은체 기본상태로 유지되고 있다.
+하지만 이를 할당해주더라도 TabbarItem의 title은 여전히 세팅이 되지 않은체 기본상태로 유지되고 있다.
 
 그러면 이건 무슨 이유때문일까?
 
@@ -123,7 +123,7 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
 | ![](assets/img/post/2024/08_31_이전_콘솔로그.png) | ![](assets/img/post/2024/08_31_이후_콘솔로그.png) |
 
 
-사실 처음에는 하위 `ViewController`에 자동적으로 생성되지 않는 `TabbarItem`의 문제라고 생각했고, 이 문제로 탭바에서 하위 tabbar에 대한 참조가 없어서 제대로 값이 들어가지 않는 것이라 생각했다.
+사실 처음에는 하위 ViewController에 자동적으로 생성되지 않는 TabbarItem의 문제라고 생각했고, 이 문제로 탭바에서 하위 tabbar에 대한 참조가 없어서 제대로 값이 들어가지 않는 것이라 생각했다.
 
 하지만 이것보다는 `Storyboard reference`로 구성하게 되면서 **View가 보여지는 시점**이 바뀌게 되었고, 이 문제로 인해서 제대로 View에 보여지지 않게 되는 것이었다.
 
