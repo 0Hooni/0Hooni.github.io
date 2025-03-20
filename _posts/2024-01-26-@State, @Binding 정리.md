@@ -105,5 +105,5 @@ SwiftUI에서의 `@State`와 `@Binding` 속성은 View의 상태를 효과적으
 
 > ### 참고 문서
 > 
-> -   [@State | 애플 개발자 문서](https://developer.apple.com/documentation/swiftui/state)
-> -   [@Binding | 애플 개발자 문서](https://developer.apple.com/documentation/swiftui/binding)
+> -   [@State /| 애플 개발자 문서](https://developer.apple.com/documentation/swiftui/state)
+> -   [@Binding /| 애플 개발자 문서](https://developer.apple.com/documentation/swiftui/binding)
