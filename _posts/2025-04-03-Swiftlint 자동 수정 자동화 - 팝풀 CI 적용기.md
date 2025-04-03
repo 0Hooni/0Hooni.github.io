@@ -44,28 +44,28 @@ tags:
 
 회의를 거친 다음 아래와 같은 규칙으로 수정했다.
 
-```
+```yml
 # 기본 활성화된 룰 중에 비활성화할 룰을 지정
 disabled_rules:
-    - redundant_optional_initialization
+  - redundant_optional_initialization
 
 # 기본(default) 룰이 아닌 룰들을 활성화
 opt_in_rules:
-    - sorted_imports
-    - direct_return
-    - file_header
-    - weak_delegate
+  - sorted_imports
+  - direct_return
+  - file_header
+  - weak_delegate
 
 # 기본 활성화된 룰 중에 조건을 변경할 룰
 file_length: 400
 
 function_body_length:
-    warning: 100
-    error: 150
+  warning: 100
+  error: 150
 
 cyclomatic_complexity:
-    warning: 15
-    error: 30
+  warning: 15
+  error: 30
 ```
 
 이후 다시 돌려본 결과는…
@@ -101,19 +101,17 @@ cyclomatic_complexity:
 이전에 CI를 써봤을 때 린트 검사를 했던 흐름을 참고해서, `autocorrect`를 자동으로 돌리는 워크플로를 만들었다.
 
 ```yaml
-autocorrect:
 name: 🤖 Autocorrect Workflow
 runs-on: macos-15  # 최신 macOS 15 환경에서 실행
 if: github.actor != 'github-actions[bot]'  # Actions 봇 커밋은 무시
 
 steps:
   # 내용 생략
-
   - name: 🎨 Run SwiftLint Autocorrect  # SwiftLint 자동 수정 실행
-	run: swiftlint --fix
+    run: swiftlint --fix
 
   - name: 🚀 Commit and Push Changes  # 변경 사항 자동 커밋 및 푸시
-	run: |
+    run: |
 	  git config user.name "github-actions[bot]"
 	  git config user.email "github-actions[bot]@users.noreply.github.com"
 
@@ -148,25 +146,22 @@ steps:
 
 
 ``` yaml
-	name: 🏗️ Build Workflow
-    runs-on: macos-15  # 최신 macOS 15 환경에서 실행
-    if: github.actor != 'github-actions[bot]'  # Actions 봇 커밋은 무시
+name: 🏗️ Build Workflow
+runs-on: macos-15  # 최신 macOS 15 환경에서 실행
+if: github.actor != 'github-actions[bot]'  # Actions 봇 커밋은 무시
 
-    steps:
-      # 내용 생략
+steps:
+  # 내용 생략
+  - name: ⚙️ Generate xcconfig
+    run: # 내용 생략
 
-      - name: ⚙️ Generate xcconfig
-        run: # 내용 생략
-
-      # 내용 생략
-        
-      - name: 🎨 Run SwiftLint  # SwiftLint 코드 스타일 검사 실행
-        run: swiftlint
-
-      # 내용 생략
-
-      - name: 🏗️ Build the project  # 자동 검지된 Scheme과 Simulator로 빌드 수행
-        run: # 내용 생략
+  # 내용 생략      
+  - name: 🎨 Run SwiftLint  # SwiftLint 코드 스타일 검사 실행
+	run: swiftlint
+	
+  # 내용 생략
+  - name: 🏗️ Build the project  # 자동 검지된 Scheme과 Simulator로 빌드 수행
+	run: # 내용 생략
 ```
 
 CI도 마찬가지로 Scheme이 변경될 수도 있기에 유지보수성을 고려해서 설계했던것 같다.
