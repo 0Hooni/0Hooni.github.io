@@ -112,16 +112,16 @@ steps:
 
   - name: 🚀 Commit and Push Changes  # 변경 사항 자동 커밋 및 푸시
     run: |
-	  git config user.name "github-actions[bot]"
-	  git config user.email "github-actions[bot]@users.noreply.github.com"
+      git config user.name "github-actions[bot]"
+      git config user.email "github-actions[bot]@users.noreply.github.com"
 
-	  # 내용 생략
+      # 내용 생략
 
-	  if [ -n "$(git status --porcelain)" ]; then
-		git add .
-		git commit -m "style/#${ISSUE_NUMBER}: Apply SwiftLint autocorrect"
-		git push --set-upstream origin "${GITHUB_HEAD_REF}"
-	  fi
+      if [ -n "$(git status --porcelain)" ]; then
+        git add .
+        git commit -m "style/#${ISSUE_NUMBER}: Apply SwiftLint autocorrect"
+        git push --set-upstream origin "${GITHUB_HEAD_REF}"
+      fi
 ```
 
 이런 저런 것들을 많이 생각했던것 같다. 
@@ -157,11 +157,11 @@ steps:
 
   # 내용 생략      
   - name: 🎨 Run SwiftLint  # SwiftLint 코드 스타일 검사 실행
-	run: swiftlint
+    run: swiftlint
 	
   # 내용 생략
   - name: 🏗️ Build the project  # 자동 검지된 Scheme과 Simulator로 빌드 수행
-	run: # 내용 생략
+    run: # 내용 생략
 ```
 
 CI도 마찬가지로 Scheme이 변경될 수도 있기에 유지보수성을 고려해서 설계했던것 같다.
