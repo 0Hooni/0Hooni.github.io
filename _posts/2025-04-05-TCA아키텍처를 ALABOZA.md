@@ -57,9 +57,11 @@ _심지어 비동기 작업의 흐름마저도 😮_
 ![TCA 데이터 흐름](assets/img/post/2025/04_05_TCA_데이터_흐름.png){: w="800"}_TCA 데이터 흐름_
 
 > [!TIP]
-> 위의 사진과 아래의 설명을 번갈아 보면 좀 더 이해가 쉽다
+> **위의 사진과 아래의 설명을 번갈아 보면 좀 더 이해가 쉽다**
+
+
 ### State - 상태
-> 앱의 현재 상태를 나타내는 순수 데이터 구조
+> **앱의 현재 상태를 나타내는 순수 데이터 구조**
 
 - Struct로 정의되며, View와 직접 바인딩되어 화면을 구성하는 데 사용
 - 간단한 예시로 현재 카운트 값, 로딩 중 여부, 네트워크 응답 결과 등
@@ -73,7 +75,7 @@ struct CounterState: Equatable {
 ```
 
 ### Action - 행동/이벤트
-> 사용자의 입력이나 외부 이벤트를 나타내는 열거형
+> **사용자의 입력이나 외부 이벤트를 나타내는 열거형**
 
 - enum으로 정의되며, View에서 발생하거나 Effect의 결과로 전달
 - Reducer는 이 Action을 받아서 적절한 처리를 수행
@@ -88,7 +90,7 @@ enum CounterAction: Equatable {
 ```
 
 ### Reducer - 상태 변경 처리
-> Action을 받아 State를 변경하고, 필요 시 Effect를 반환하는 순수 함수
+> **Action을 받아 State를 변경하고, 필요 시 Effect를 반환하는 순수 함수**
 
 - Reducer<State, Action, Enviroment> 형태로 구성
 - 모든 상태 변화는 Reducer를 통해서만 발생
@@ -114,7 +116,7 @@ let counterReducer = Reducer<CounterState, CounterAction, CounterEnvironment> { 
 ```
 
 ### Effect - 작업/비동기 처리
-> 비동기 작업, 외부 시스템과의 상호작용, 사이드 이펙트를 명시적으로 표현하는 값
+> **비동기 작업, 외부 시스템과의 상호작용, 사이드 이펙트를 명시적으로 표현하는 값**
 
 - 주로 네트워크 요청, 타이머, 알림, 파일 I/O등 외부와의 상호작용을 표현
 - 실행 후 다시 Action을 발생시켜 Reducer로 흘러들어감
@@ -129,7 +131,7 @@ Effect.run { send in
 ```
 
 ### Store - 상태 및 로직 관리 허브
-> View와 Reducer, State를 연결해주는 중심 객체
+> **View와 Reducer, State를 연결해주는 중심 객체**
 
 - View는 Store를 통해 Action을 보내고, State를 구독
 - 내부적으로는 State를 보관하고, Action이 오면 Reducer를 호출하고, 그 결과를 처리
