@@ -108,9 +108,9 @@ let counterReducer = Reducer<CounterState, CounterAction, CounterEnvironment> { 
         }
     }
     case .dataResponse(let result):
-	    state.data = result
-	    state.isLoading = false
-	    return .none
+        state.data = result
+        state.isLoading = false
+        return .none
 }
 ```
 
