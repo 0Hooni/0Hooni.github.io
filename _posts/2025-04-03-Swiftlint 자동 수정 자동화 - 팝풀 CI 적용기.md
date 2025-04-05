@@ -8,6 +8,7 @@ tags:
   - Swift
   - Project
   - PopPool
+  - DevOps
 ---
 처음 팀에 들어오고 가장 먼저 맡았던 일은 코드 리뷰였다.
 
