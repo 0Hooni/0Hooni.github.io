@@ -6,6 +6,7 @@ tags:
   - SPM
   - TroubleShooting
   - Git
+  - Percevy
 ---
 최근에 패키지를 설치하거나 제거하는 일이 몇번 있었는데
 
