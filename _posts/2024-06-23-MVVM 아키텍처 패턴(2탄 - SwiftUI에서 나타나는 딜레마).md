@@ -5,6 +5,7 @@ categories:
   - 🍎 Dev
   - SwiftUI
 tags:
+  - SwiftUI
   - Project
   - Pattern
   - CS
