@@ -52,10 +52,10 @@ tags:
 
 두 파일 모두 `~/Library/Caches/`{: .filepath}에 위치한다. 
 
-#### org.swift.swiftpm
+#### **org.swift.swiftpm**
 
 SPM과 관련된 설정, 캐시, 의존성 정보가 저장되는 용도로 사용
-#### com.apple.dt.Xcode
+#### **com.apple.dt.Xcode**
 
 Xcode의 설정, 사용자 환경, 시뮬레이터 정보, 캐시 등 다양한 데이터를 저장하는데 사용
 
@@ -65,19 +65,19 @@ Xcode의 설정, 사용자 환경, 시뮬레이터 정보, 캐시 등 다양한 
 
 ### 5. disablePackageRepositoryCache
 
-[Xcode 16 & Package load failure | Apple Developer Forums](https://developer.apple.com/forums/thread/763897?answerId=809113022#809113022)
+[Xcode 16 & Package load failure \| Apple Developer Forums](https://developer.apple.com/forums/thread/763897?answerId=809113022#809113022)
 
 해당 포럼의 내용을 보다가 `xcodebuild -resolvePackageDependencies -disablePackageRepositoryCache`명령어를 실행해보라 했다.
 
 무슨 명령어일까?
 
-#### `resolvePackageDependencies`
+#### **`resolvePackageDependencies`**
 
 패키지 의존성 해결 명령어이다.
 
 아마 SPM 3신기중 resolve를 실행하는것으로 보였다.
 
-#### `disablePackageRepositoryCache`
+#### **`disablePackageRepositoryCache`**
 
 패키지 캐싱을 비활성화하는 명령어다.
 
