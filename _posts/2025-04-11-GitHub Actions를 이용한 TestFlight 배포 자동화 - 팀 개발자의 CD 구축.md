@@ -1,5 +1,5 @@
 ---
-title: "[Swift] GitHub Actions + App Store Connect API를 이용한 TestFlight 배포 자동화 - 외부 개발자로서 CD 구축하기"
+title: "[Swift] GitHub Actions를 이용한 TestFlight 배포 자동화 - 팀 개발자의 CD 구축"
 date: 2025-04-11 15:59 +0900
 categories:
   - 🍎 Dev
