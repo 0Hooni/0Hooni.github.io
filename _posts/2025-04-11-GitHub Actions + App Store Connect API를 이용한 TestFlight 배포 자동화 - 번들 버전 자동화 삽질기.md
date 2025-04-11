@@ -22,7 +22,11 @@ _**(✨ 개발자의 시간은 소중하니까 ✨)**_
 
 배포한 계정의 소유주가 아닌 팀 개발자가 CD를 야무지게 구현할만한 방법들이 거의 보이지 않았다.
 
-그러다 우연히 [TestFlight 자동화](https://sujinnaljin.medium.com/ci-cd-github-actions-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-testflight-%EC%97%85%EB%A1%9C%EB%93%9C-%EC%9E%90%EB%8F%99%ED%99%94-8ecdbeb227a3) 글을 보게 되었고, "외부 개발자여도 App Store Connect API와 GitHub Actions를 이용하여 CD 구축이 가능하겠다!"는 생각에 도전하게 되었다.
+그러다 우연히 [TestFlight 자동화](https://sujinnaljin.medium.com/ci-cd-github-actions-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-testflight-%EC%97%85%EB%A1%9C%EB%93%9C-%EC%9E%90%EB%8F%99%ED%99%94-8ecdbeb227a3) 글을 보게 되었고, 
+
+"외부 개발자여도 App Store Connect API와 GitHub Actions를 이용하여 CD 구축이 가능하겠다!"
+
+는 생각에 도전하게 되었다.
 
 ## 🧑🏻‍💻 팀 개발자가 CD를 구현하기 위해 필요한 조건
 
@@ -75,26 +79,26 @@ CD의 흐름은 아래처럼 간단히 정리할 수 있다.
 
 대부분의 레퍼런스에서 자동 번들 버전 범핑을 위해 
 
-Info.plist의 CFBundleVersion을 수정하는 Run Script를 구성하거나, 
+`Info.plist`의 `CFBundleVersion`을 수정하는 Run Script를 구성하거나, 
 
 워크플로우에서 수정하는 방식이었다.
 
 나도 처음에는 이렇게 적용을 했는데,,,,,
 
-몇번을 해도 **추출된 ipa에서는 Bundle Version이 Info.plist의 버전을 따라가지 않는 것**이었다.
+몇번을 해도 **추출된 ipa에서는 Bundle Version이 `Info.plist`의 버전을 따라가지 않는 것**이었다.
 
 ### 문제의 원인
 
 나도 이 문제를 해결하기 위해 열심히 디버깅을 하던 중 알게된 핵심은
 
-1. **프로젝트 설정의 번들 버전은 Info.plist의 CFBundleVersion과 같지 않다는 것**
+1. **프로젝트 설정의 번들 버전은 `Info.plist`의 `CFBundleVersion`과 같지 않다는 것**
 2. **추출된 ipa는 프로젝트 설정의 번들 버전을 따른다는 것**
 
-Info.plist는 변수를 넣어줄 수 있는데 이 때 CFBundleVersion에 기본으로 $(CURRENT_PROJECT_VERSION)을 할당해주어 둘을 같다고 인식한 것이었다.
+`Info.plist`는 변수를 넣어줄 수 있는데 이 때 `CFBundleVersion`에 기본으로 `$(CURRENT_PROJECT_VERSION)`을 할당해주어 둘을 같다고 인식한 것이었다.
 
-그래서 아무리 레퍼런스의 방식을 따라하더라도 CFBundleVersion을 바꾸면 그냥 변수가 특정 상수로 바뀔 뿐,
+그래서 아무리 레퍼런스의 방식을 따라하더라도 `CFBundleVersion`을 바꾸면 그냥 변수가 특정 상수로 바뀔 뿐,
 
-원하던 빌드 버전(빌드 설정의 CURRENT_PROJECT_VERSION)이 오르는 결과를 내진 않던 것이었다.
+원하던 빌드 버전(빌드 설정의 `CURRENT_PROJECT_VERSION`)이 오르는 결과를 내진 않던 것이었다.
 
 _**(알고보니 레퍼런스들이 거의 5~10년 지났던 거기도 했음 🥲)**_
 
@@ -106,7 +110,7 @@ _**(알고보니 레퍼런스들이 거의 5~10년 지났던 거기도 했음 �
 
 좀만 고민해보니까 이거 안좋은 방식 같았다
 
-pbxproj 파일이 빌드할 때 마다 info.plist를 기반으로 수정된다고...?
+`.pbxproj` 파일이 빌드할 때 마다 `Info.plist`를 기반으로 수정된다고...?
 
 파일의 중요도가 역전되는 현상이었다.
 
@@ -144,7 +148,7 @@ _**(오히려 좀 더 직관적이기도?)**_
 
 중간에 빌드 자동 범핑이 생각처럼 되지 않아 수동 빌드 넘버링을 그냥 쓸까 하며 반포기 했었는데,
 
-막상 있으니까 **TestFlight 배포를 위해서 나는 오직 release/* 브랜치에 PR**만 날려주면 돼서 너무 좋다 지이이인짜👍🏻
+막상 있으니까 **TestFlight 배포를 위해서 나는 오직 `release/*` 브랜치에 PR**만 날려주면 돼서 너무 좋다 지이이인짜👍🏻
 
 무엇보다 이번에 자동화를 통해 얻은 가장 큰 결과는 **더 집중하기 좋은 개발환경** 않을까 싶다.
 
