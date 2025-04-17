@@ -23,6 +23,7 @@ ViewModel에서 구체 구현체를 직접 생성하거나 의존하다 보니 *
 그래서 선택한 방법이 바로 **PropertyWrapper + DIContainer** 조합이었다.
 
 > **\[팝풀] DIContainer 및 의존성 제거** 
+> 
 > [[REFACTOR] DIContainer 구현 및 Presentation layer에 외부 의존성 제거](https://github.com/PopPool/iOS/pull/115)
 
 ## DI란 무엇인가
@@ -35,7 +36,7 @@ DI(Dependency Injection)는 객체가 필요로 하는 의존성을 외부에서
 
 ```swift
 class MyViewModel {
-    let useCase = UseCaseImpl()
+	let useCase = UseCaseImpl()
 }
 ```
 
@@ -45,11 +46,11 @@ class MyViewModel {
 
 ```swift
 class MyViewModel {
-    let useCase: UseCase
+	let useCase: UseCase
 
-    init(useCase: UseCase) {
-        self.useCase = useCase
-    }
+	init(useCase: UseCase) {
+		self.useCase = useCase
+	}
 }
 ```
 
@@ -116,7 +117,7 @@ class MyViewModel {
 
 근데 이제 PropertyWrapper로 만들면서 생긴 문제가 있다.
 
-### **(번외) PropertyWrapper는 왜 var인가?**
+## **PropertyWrapper 불변성을 위한 고민**
 
 Swift에서 PropertyWrapper를 사용할 때는 반드시 var로 선언해야 한다.
 
