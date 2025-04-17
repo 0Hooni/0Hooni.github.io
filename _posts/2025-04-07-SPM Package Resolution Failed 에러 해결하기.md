@@ -1,11 +1,12 @@
 ---
-title: "[Swift] SPM Package Resolution Failed 에러 해결하기"
+title: "[Xcode] SPM Package Resolution Failed 에러 해결하기"
 date: 2025-04-07 11:35 +0900
-categories: 
+categories:
+  - 🍎 Dev
+  - Xcode
 tags:
+  - Xcode
   - SPM
-  - TroubleShooting
-  - Git
   - PopPool
   - Percevy
 ---
