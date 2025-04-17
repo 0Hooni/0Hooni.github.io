@@ -1,5 +1,5 @@
 ---
-title: "[Swift] TCA 아키텍처를 ALABOZA"
+title: "[SwiftUI] TCA 아키텍처를 ALABOZA"
 date: 2025-04-05 21:43 +0900
 categories:
   - 🍎 Dev
