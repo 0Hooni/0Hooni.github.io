@@ -133,7 +133,7 @@ struct AvatarView: View {
 
 이렇게 하면 ViewModel에 선언된 `@Published` 모델이 변경될 때 `@StateObject`로 선언된 ViewModel이 갱신되면서 최종적으로 사진이 추가됩니다.
 
-#### **🥳 최종 완성**
+### **🥳 최종 완성**
 
 ![](assets/img/post/2025/04_23_프로필_사진_추가_최종.gif)
 
