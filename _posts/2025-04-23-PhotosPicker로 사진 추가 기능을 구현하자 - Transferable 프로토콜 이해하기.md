@@ -15,6 +15,10 @@ SwiftUI를 최대한 활용하는 것이 목적이었기에, 대다수의 레퍼
 
 그래서 이를 대체하기 위해 iOS 16부터 지원되는 **`PhotosPicker`를 활용하여 프로필 사진 추가 및 제거 과정을 MVVM 패턴에 따라 정리**해보았습니다.
 
+> \[GitHub PR] 프로필 사진 추가 및 제거 UI와 기능 구현 PR
+> 
+> [[FEAT] 프로필 설정 UI 그리기 및 기능 구현](https://github.com/Percevy/iOS/pull/5)
+
 ## 🖼️ PhotosPicker 띄우기
 
 `PhotosPicker`를 띄우는 방법은 두 가지가 있습니다.
