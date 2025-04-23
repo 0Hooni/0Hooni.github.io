@@ -147,7 +147,7 @@ struct AvatarView: View {
 
 > - 파라미터로 넘긴 타입(T)은 `Transferable` 프로토콜을 채택하고 있어야 합니다.
 > - 아이템이 지원하는 content type 중 T와 호환되는 첫 번째 representation을 찾습니다.
-> - 해당 representation을 비동기적으로 로드하여 T 인스턴스로 반환합니다.{: .prompt-info }
+> - 해당 representation을 비동기적으로 로드하여 T 인스턴스로 반환합니다. {: .prompt-info }
 
 
 _**(Transferable...? representation...?)**_
@@ -177,11 +177,10 @@ _**(Transferable...? representation...?)**_
 `Transferable` 타입을 어떻게 포함시키거나 전송할지 정의하는 역할을 합니다.
 
 > **\[애플에서 제공되는 대표적인 Representation 종류]**
-> 
 > - **Codable:** 모델이 Codable을 채택해 JSON 형태로 직렬화할 때
 > - **Data:** 모델이 Data로 변환 가능할 때
 > - **File:** 파일 URL을 통해 대용량 전송이 필요할 때
-> - **Proxy:** Transferable을 채택한 일반 타입들(String, Data 등)을 전송할 때{: .prompt-info }
+> - **Proxy:** Transferable을 채택한 일반 타입들(String, Data 등)을 전송할 때 {: .prompt-info }
 
 다양한 Representation을 통해 최종적으로 모델을 어떻게 전송할지 정의할 수 있습니다.
 
