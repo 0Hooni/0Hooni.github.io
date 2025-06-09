@@ -48,9 +48,9 @@ PhotosPicker(
 
 ```swift
 .photosPicker(
-	isPresented: $isPhotosPickerPresented,
-	selection: $viewModel.selectedPhoto,
-	matching: .images
+    isPresented: $isPhotosPickerPresented,
+    selection: $viewModel.selectedPhoto,
+    matching: .images
 )
 ```
 
