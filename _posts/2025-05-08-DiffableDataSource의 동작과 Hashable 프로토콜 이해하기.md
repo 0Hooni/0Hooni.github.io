@@ -45,7 +45,7 @@ UI를 업데이트할 때 DataSource의 섹션 수와 실제 UI 업데이트 내
 
 ### DiffableDataSource의 등장
 
-![](05_08_데이터_소스_핵심_변경.png){: width=400}
+![](assets/img/post/2025/05_08_데이터_소스_핵심_변경.png){: width=400}
 
 기존의 DataSource에서 여러 Update를 처리를 해주기 위해 `performBatchUpdates()`를 사용하였습니다. 또한 내부적으로는 여러 비교를 통해 적절한 업데이트 처리도 개발자의 몫이었죠. 하지만 DiffableDataSource에서는 간단하게 `apply()`만 실행해주면 모든게 해결해주도록 해주었습니다.
 
