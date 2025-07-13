@@ -9,7 +9,7 @@ tags:
   - Swift
   - PopPool
 ---
-최근에 팝풀의 검색화면을 문제를 해결하는 과정에서 기존의 DataSource를 Diffable로 교체한 경험이 있었습니다.
+최근에 팝풀의 검색화면에서 발생하는 플리커링 문제를 해결하는 과정에서 기존의 DataSource를 Diffable로 교체한 경험이 있었습니다.
 
 DiffableDataSource는 흔히 반복적인 변경이 일어나는 TableView나 CollectionView에서 많이 도입한다고 말하죠. 잦은 변경에 용이한 구조라 하면서.
 
