@@ -2,7 +2,7 @@
 title: "[Unity] Start, Awake, Update 함수의 특징"
 date: 2023-03-01 16:38 +0900
 categories:
-  - 🗂️ etc
+  - 🎮 Game
   - Unity
 tags:
   - Unity
