@@ -2,7 +2,7 @@
 title: "[Swift] GitHub Actions를 이용한 TestFlight 배포 자동화 - 팀 개발자의 CD 구축"
 date: 2025-04-11 15:59 +0900
 categories:
-  - 🍎 Dev
+  - 🍎 iOS
   - Swift
 tags:
   - DevOps

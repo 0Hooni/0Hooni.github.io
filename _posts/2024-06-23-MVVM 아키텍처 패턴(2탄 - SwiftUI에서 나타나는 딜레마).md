@@ -2,7 +2,7 @@
 title: "[SwiftUI] MVVM 아키텍처 패턴(2탄 - SwiftUI에서 나타나는 딜레마)"
 date: 2024-06-23 00:48 +0900
 categories:
-  - 🍎 Dev
+  - 🍎 iOS
   - SwiftUI
 tags:
   - SwiftUI

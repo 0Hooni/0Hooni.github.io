@@ -2,7 +2,7 @@
 title: "[Xcode] 등록된 ProvisioningProfile 제거하기"
 date: 2025-04-18 00:04 +0900
 categories:
-  - 🍎 Dev
+  - 🍎 iOS
   - Xcode
 tags:
   - Xcode

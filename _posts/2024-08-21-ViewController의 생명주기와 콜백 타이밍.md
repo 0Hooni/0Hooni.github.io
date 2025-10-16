@@ -2,7 +2,7 @@
 title: "[UIKit] ViewController의 생명주기와 콜백 타이밍"
 date: 2024-08-21 01:42 +0900
 categories:
-  - 🍎 Dev
+  - 🍎 iOS
   - UIKit
 tags:
   - UIKit

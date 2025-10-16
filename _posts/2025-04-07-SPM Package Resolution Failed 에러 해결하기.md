@@ -2,7 +2,7 @@
 title: "[Xcode] SPM Package Resolution Failed 에러 해결하기"
 date: 2025-04-07 11:35 +0900
 categories:
-  - 🍎 Dev
+  - 🍎 iOS
   - Xcode
 tags:
   - Xcode

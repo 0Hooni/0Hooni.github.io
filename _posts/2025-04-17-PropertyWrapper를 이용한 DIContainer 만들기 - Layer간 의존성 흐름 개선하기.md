@@ -2,7 +2,7 @@
 title: "[Swift] PropertyWrapper를 이용한 DIContainer 만들기 - Layer간 의존성 흐름 개선하기"
 date: 2025-04-17 17:17 +0900
 categories:
-  - 🍎 Dev
+  - 🍎 iOS
   - Swift
 tags:
   - Swift

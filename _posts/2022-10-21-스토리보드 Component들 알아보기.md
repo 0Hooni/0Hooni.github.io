@@ -2,7 +2,7 @@
 title: "[UIKit] 스토리보드 Component들 알아보기"
 date: 2022-10-21 23:20 +0900
 categories:
-  - 🍎 Dev
+  - 🍎 iOS
   - UIKit
 tags:
   - UIKit

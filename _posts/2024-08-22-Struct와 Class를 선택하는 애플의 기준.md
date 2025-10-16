@@ -2,7 +2,7 @@
 title: "[Swift] Struct와 Class를 선택하는 애플의 기준"
 date: 2024-08-22 00:23:21 +0900
 categories:
-  - 🍎 Dev
+  - 🍎 iOS
   - Swift
 tags:
   - Swift
