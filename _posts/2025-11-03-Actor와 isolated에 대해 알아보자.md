@@ -38,7 +38,6 @@ class BankAccount {
     }
 }
 
-
 let account = BankAccount()
 Task { account.deposit(100) }
 Task { account.deposit(100) }
@@ -52,7 +51,7 @@ Task { account.deposit(100) }
 
 Actor를 사용하면 내부 프로퍼티는 **자신의 고유한 격리 영역(isolation)** 안에 존재하게 됩니다.
 
-아까 Class를 Actor로 바꿔보겠습니다.
+아까 Class를 Actor로 바꿔보겠습니다.
 
 ~~~swift
 // ✅ Actor: 데이터 레이스 방지
@@ -201,12 +200,13 @@ actor Calculator {
 ## 🏁 마무리
 ### Swift 동시성 핵심
 
-| 키워드 | 설명 | 사용 시점 |
-|--------|------|-----------|
-| `actor` | 스레드 안전한 참조 타입 | 공유 상태를 안전하게 관리할 때 |
-| `@MainActor` | 메인 스레드 전용 Global Actor | UI 업데이트 로직 |
-| `isolated` | Actor의 격리 영역 내부 | 상태 변경 메서드 |
-| `nonisolated` | Actor 격리 영역 외부 | 순수 계산, 불변 데이터 |
+| 키워드           | 설명                     | 사용 시점             |
+| ------------- | ---------------------- | ----------------- |
+| `actor`       | 스레드 안전한 참조 타입          | 공유 상태를 안전하게 관리할 때 |
+| `@MainActor`  | 메인 스레드 전용 Global Actor | UI 업데이트 로직        |
+| `isolated`    | Actor의 격리 영역 내부        | 상태 변경 메서드         |
+| `nonisolated` | Actor 격리 영역 외부         | 순수 계산, 불변 데이터     |
+
 정리해보면
 
 Actor는 Class가 가질 수 있는 race condition에 대한 문제를 해결해주기 핵심 도구입니다.
