@@ -1,11 +1,11 @@
 ---
 title: "[Swift] Actor와 isolated에 대해 알아보자"
 date: 2025-11-03 16:13 +0900
+description: "Swift의 Actor와 isolated 키워드를 활용한 동시성 프로그래밍을 알아봅니다."
 categories:
   - Language
   - Swift
 tags:
-  - Swift
   - Concurrency
 ---
 최근 간단한 비디오 데모 앱을 개발하며 **컴파일 타임 Thread Safety**를 직접 경험하기 위해 Swift 6를 도입했습니다.

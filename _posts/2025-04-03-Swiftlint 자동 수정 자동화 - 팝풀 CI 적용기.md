@@ -1,14 +1,13 @@
 ---
 title: "[Swift] Swiftlint 자동 수정 자동화 - 팝풀 CI 적용기"
 date: 2025-04-03 11:22 +0900
+description: "SwiftLint 자동 수정을 CI 파이프라인에 통합하는 방법을 다룹니다."
 categories:
   - Mobile
   - iOS
 tags:
-  - Swift
-  - Project
-  - PopPool
-  - DevOps
+  - CI-CD
+  - Fastlane
 ---
 처음 팀에 들어오고 가장 먼저 맡았던 일은 코드 리뷰였다.
 

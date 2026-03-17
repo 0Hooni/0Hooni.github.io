@@ -1,11 +1,12 @@
 ---
 title: "[Unity] Start, Awake, Update 함수의 특징"
 date: 2023-03-01 16:38 +0900
+description: "Unity의 Start, Awake, Update 생명주기 함수의 차이와 특징을 정리합니다."
 categories:
   - Game
   - Unity
 tags:
-  - Unity
+  - tutorial
 ---
 "레트로의 유니티" 책을 읽어보던 중에 지속적으로 새로운 C# 스크립트를 생성하면 기본적으로 생성되는 함수가 두 가지가 있다. 하나는 Start() 함수이고, 나머지 하나는 Update() 함수이다. 이 둘의 역할에 대해서 궁금해서 블로그 포스팅을 할 겸 적어보며 정리해보려 한다.
 

@@ -1,11 +1,12 @@
 ---
 title: "[Xcode] 등록된 ProvisioningProfile 제거하기"
 date: 2025-04-18 00:04 +0900
+description: "등록된 Provisioning Profile을 Xcode에서 제거하는 방법을 정리합니다."
 categories:
   - Mobile
   - iOS
 tags:
-  - Xcode
+  - troubleshooting
 ---
 팀원들이랑 협업을 하다보면 실기기 빌드를 하거나 배포를 위해 Development용 또는 Distribution용 인증서와 프로비저닝 프로필이 필요하다.
 

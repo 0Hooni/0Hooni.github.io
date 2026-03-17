@@ -1,13 +1,12 @@
 ---
 title: "[UIKit] ViewController의 생명주기와 콜백 타이밍"
 date: 2024-08-21 01:42 +0900
+description: "UIKit ViewController의 생명주기 메서드와 콜백 타이밍을 자세히 알아봅니다."
 categories:
   - Mobile
   - iOS
 tags:
-  - UIKit
   - ViewController
-  - boostcamp
 ---
 뷰의 라이프사이클은 앱을 생성할 때 가장 먼저 보이는 것중 하나이다.
 

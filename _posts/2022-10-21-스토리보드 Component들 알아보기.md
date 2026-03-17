@@ -1,12 +1,13 @@
 ---
 title: "[UIKit] 스토리보드 Component들 알아보기"
 date: 2022-10-21 23:20 +0900
+description: "UIKit 스토리보드의 주요 컴포넌트들을 살펴봅니다."
 categories:
   - Mobile
   - iOS
 tags:
-  - UIKit
   - Storyboard
+  - tutorial
 ---
 ## **Storyboard**
 

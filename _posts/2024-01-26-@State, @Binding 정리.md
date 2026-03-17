@@ -1,11 +1,13 @@
 ---
 title: "[SwiftUI] @State, @Binding 정리"
 date: 2024-01-26 01:04 +0900
+description: "SwiftUI의 @State와 @Binding 프로퍼티 래퍼를 정리합니다."
 categories:
   - Mobile
   - iOS
 tags:
-  - SwiftUI
+  - State-Management
+  - tutorial
 ---
 SwiftUI를 처음 시작하면 자주 보게되는 `@State` 와 `@Binding` 이라는 속성이 있다.
 

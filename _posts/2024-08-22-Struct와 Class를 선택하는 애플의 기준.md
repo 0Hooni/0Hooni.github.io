@@ -1,14 +1,12 @@
 ---
 title: "[Swift] Struct와 Class를 선택하는 애플의 기준"
 date: 2024-08-22 00:23:21 +0900
+description: "Swift에서 Struct와 Class를 선택하는 Apple의 공식 가이드라인을 정리합니다."
 categories:
   - Language
   - Swift
 tags:
-  - Swift
-  - DataStruct
-  - CS
-  - boostcamp
+  - tutorial
 ---
 여러개의 자료형들을 묶어 하나의 타입으로 만드는 방법의 대표적인 방법에는 `Struct`와 `class`가 있다.
 

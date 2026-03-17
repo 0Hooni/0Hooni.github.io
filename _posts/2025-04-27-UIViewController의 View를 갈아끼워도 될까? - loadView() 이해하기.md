@@ -1,13 +1,12 @@
 ---
 title: "[UIKit] UIViewController의 View를 갈아끼워도 될까? - loadView() 이해하기"
 date: 2025-04-27 17:03 +0900
+description: "UIViewController의 loadView() 메서드를 이해하고 View를 커스텀하는 방법을 알아봅니다."
 categories:
   - Mobile
   - iOS
 tags:
-  - UIKit
   - ViewController
-  - PopPool
 ---
 최근 프로젝트에서 ViewController에 새로운 컨벤션을 적용하는 과정에서 
 

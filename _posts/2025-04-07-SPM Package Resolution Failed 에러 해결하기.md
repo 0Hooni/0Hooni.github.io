@@ -1,14 +1,13 @@
 ---
 title: "[Xcode] SPM Package Resolution Failed 에러 해결하기"
 date: 2025-04-07 11:35 +0900
+description: "Xcode에서 SPM Package Resolution Failed 에러가 발생하는 원인과 해결 방법을 정리합니다."
 categories:
   - Mobile
   - iOS
 tags:
-  - Xcode
   - SPM
-  - PopPool
-  - Percevy
+  - troubleshooting
 ---
 최근에 패키지를 설치하거나 제거하는 일이 몇번 있었는데
 

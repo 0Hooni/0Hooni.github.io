@@ -1,12 +1,12 @@
 ---
 title: "[SwiftUI] PhotosPicker로 사진 추가 기능을 구현하자 - Transferable 프로토콜 이해하기"
 date: 2025-04-23 18:24 +0900
+description: "SwiftUI PhotosPicker와 Transferable 프로토콜을 이용한 사진 추가 기능 구현 방법을 알아봅니다."
 categories:
   - Mobile
   - iOS
 tags:
-  - SwiftUI
-  - MVVM
+  - Transferable
 ---
 
 후배와 함께 진행하는 프로젝트 중 사용자 프로필 설정 화면을 만들면서 사진을 추가하거나 제거하는 기능을 구현해야 하는 일이 있었습니다.

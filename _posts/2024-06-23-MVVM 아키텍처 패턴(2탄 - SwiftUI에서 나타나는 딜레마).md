@@ -1,14 +1,13 @@
 ---
 title: "[SwiftUI] MVVM 아키텍처 패턴(2탄 - SwiftUI에서 나타나는 딜레마)"
 date: 2024-06-23 00:48 +0900
+description: "SwiftUI에서 MVVM 패턴을 적용할 때 나타나는 딜레마와 고민을 다룹니다."
 categories:
   - Mobile
   - iOS
 tags:
-  - SwiftUI
-  - Project
-  - Pattern
-  - CS
+  - Architecture
+  - MVVM
 ---
 지난 포스팅에서 MVVM 패턴을 이해하기 위한 내용들을 정리했고, 이번 편에서는 SwiftUI에서의 MVVM 패턴에 대한 딜레마에 대해 다뤄볼까 한다.
 

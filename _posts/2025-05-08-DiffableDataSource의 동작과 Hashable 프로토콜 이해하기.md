@@ -1,13 +1,12 @@
 ---
 title: "[UIKit] DiffableDataSource의 동작과 Hashable 프로토콜 이해하기"
 date: 2025-05-08 14:36 +0900
+description: "UIKit DiffableDataSource의 동작 원리와 Hashable 프로토콜의 역할을 이해합니다."
 categories:
   - Mobile
   - iOS
 tags:
-  - UIKit
-  - Swift
-  - PopPool
+  - tutorial
 ---
 최근에 팝풀의 검색화면에서 발생하는 플리커링 문제를 해결하는 과정에서 기존의 DataSource를 Diffable로 교체한 경험이 있었습니다.
 

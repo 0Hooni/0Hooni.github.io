@@ -1,11 +1,12 @@
 ---
 title: "[Unity] MonoBehaviour, 너 누구야?"
 date: 2023-03-12 13:17 +0900
+description: "Unity MonoBehaviour 클래스의 역할과 동작 원리를 알아봅니다."
 categories:
   - Game
   - Unity
 tags:
-  - Unity
+  - tutorial
 ---
   이번 "레트로의 유니티" 2부에서는 전반적으로 유니티에서 사용될 C# 문법에 대해 다루었다. 이전 글에서는 C#스크립트를 생성하면 나오는 기초 함수에 대해 다루었다면, 이번엔 스크립트의 기본 클래스에 계속 상속되어 있는 MonoBehaviour에 대해 다뤄볼 까 한다. 얘는 대체 뭐길래 처음부터 이렇게 상속을 받고 시작하나 궁금했다. 새로 스크립트를 생성할때 기본 이름도 NewBehaviour이고, 뭔가 있을거 같고 궁금해서 이렇게 찾아보게 되었다.
 

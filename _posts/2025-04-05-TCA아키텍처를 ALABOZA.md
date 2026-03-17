@@ -1,14 +1,13 @@
 ---
 title: "[SwiftUI] TCA 아키텍처를 ALABOZA"
 date: 2025-04-05 21:43 +0900
+description: "The Composable Architecture(TCA)의 핵심 개념과 구조를 알아봅니다."
 categories:
   - Mobile
   - iOS
 tags:
-  - Swift
-  - SwiftUI
-  - Pattern
-  - Percevy
+  - Architecture
+  - TCA
 ---
 예전에 [SwiftUI 아키텍처에 대한 학습](https://0hooni.github.io/posts/MVVM-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%ED%8C%A8%ED%84%B4-(1%ED%83%84-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0)/)을 하다가 우연히 TCA를 알게 된 일이 있었다. 
 

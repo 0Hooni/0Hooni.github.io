@@ -51,10 +51,18 @@ tags:
 ```
 
 ### 작성 컨벤션
-- **제목**: `[약어] 제목` 형식 (예: `[Swift]`, `[RN/Expo]`)
+- **제목**: `[기술명] 제목` 형식 (예: `[Swift]`, `[ReactNative]`, `[UIKit]`, `[부스트캠프]`)
+- **description**: 1-2문장 요약 (SEO 메타 태그로 사용)
 - **섹션**: 이모지 + 제목 (예: `## 🤔 제목`)
 - **레퍼런스**: 마지막에 `## 🔗 레퍼런스` 섹션 포함
 - **Prompt 블록**: `{: .prompt-info }`, `{: .prompt-tip }` 사용 가능
+
+### 태그 컨벤션
+- **기술 태그** (영어): `Architecture`, `Concurrency`, `CI-CD`, `MVVM`, `TCA`, `SPM`, `Storyboard` 등
+- **유형 태그** (영어): `tutorial`, `troubleshooting`, `review`
+- **비기술 태그** (한글): `회고`, `후기`
+- 프로젝트명은 태그에 넣지 않음
+- 카테고리와 중복되는 태그(Swift, UIKit 등) 사용하지 않음
 
 ## 이미지 관리
 

@@ -1,12 +1,13 @@
 ---
 title: "[Swift] PropertyWrapper를 이용한 DIContainer 만들기 - Layer간 의존성 흐름 개선하기"
 date: 2025-04-17 17:17 +0900
+description: "Swift PropertyWrapper를 활용한 DIContainer 구현으로 레이어 간 의존성 흐름을 개선합니다."
 categories:
   - Mobile
   - iOS
 tags:
-  - Swift
-  - PopPool
+  - Architecture
+  - DI
 ---
 지금 참여하고 있는 프로젝트에서 3-layer 클린 아키텍처를 도입하고 있었다.  
 

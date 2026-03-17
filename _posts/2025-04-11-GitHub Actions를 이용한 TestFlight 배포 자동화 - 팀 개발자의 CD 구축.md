@@ -1,13 +1,13 @@
 ---
 title: "[Swift] GitHub Actions를 이용한 TestFlight 배포 자동화 - 팀 개발자의 CD 구축"
 date: 2025-04-11 15:59 +0900
+description: "GitHub Actions를 이용하여 TestFlight 배포를 자동화하는 CD 파이프라인을 구축합니다."
 categories:
   - Mobile
   - iOS
 tags:
-  - DevOps
-  - PopPool
-  - Project
+  - CI-CD
+  - GitHub-Actions
 ---
 
 팝풀 프로젝트에서 첫 배포를 마친 뒤, 본격적으로 차기 버전을 준비하면서 **배포 과정을 자동화하고 싶다는 생각이 들었다.**

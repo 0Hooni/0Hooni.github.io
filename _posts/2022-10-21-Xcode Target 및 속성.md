@@ -1,11 +1,12 @@
 ---
 title: "[Xcode] Target 및 속성"
 date: 2022-10-21 00:04:00 +0900
+description: "Xcode Target의 개념과 주요 속성을 알아봅니다."
 categories:
   - Mobile
   - iOS
 tags:
-  - Xcode
+  - tutorial
 ---
 ## **Target**
 

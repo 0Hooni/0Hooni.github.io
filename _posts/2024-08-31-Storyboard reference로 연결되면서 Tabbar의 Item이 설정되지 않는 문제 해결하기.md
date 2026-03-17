@@ -1,15 +1,13 @@
 ---
 title: "[UIKit] Storyboard reference로 연결되면서 Tabbar의 Item이 설정되지 않는 문제 해결하기"
 date: 2024-08-31 00:41 +0900
+description: "UIKit Storyboard reference 사용 시 TabBar Item이 표시되지 않는 문제를 해결합니다."
 categories:
   - Mobile
   - iOS
 tags:
-  - UIKit
   - Storyboard
-  - TroubleShooting
-  - ViewController
-  - boostcamp
+  - troubleshooting
 ---
 팀 동료와 미션 수행한 내용을 공유하는 과정에서 스토리보드도 파일 분리를 할 수 있다는 것을 알게 되었다.
 

@@ -1,11 +1,12 @@
 ---
 title: "[Xcode] AppProject 및 속성"
 date: 2022-10-21 21:15 +0900
+description: "Xcode AppProject의 구조와 주요 속성을 알아봅니다."
 categories:
   - Mobile
   - iOS
 tags:
-  - Xcode
+  - tutorial
 ---
 ## **Project**
 
