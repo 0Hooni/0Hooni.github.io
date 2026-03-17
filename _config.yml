@@ -16,10 +16,10 @@ timezone: Asia/Seoul
 
 title: 0Hooni DevLog # the main title
 
-tagline: iOS 개발일기 # it will display as the subtitle
+tagline: 개발을 기록합니다 # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
- 0Hooni DevLog, iOS, Swift, UIKit, SwiftUI
+ 0Hooni DevLog, Mobile, Web, Backend, iOS, React Native, NestJS
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -36,6 +36,7 @@ social:
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: 0Hooni
   email: thddudgns972@gmail.com # change to your email address
+  fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/username # change to your Twitter homepage
@@ -212,8 +213,10 @@ exclude:
   - tools
   - README.md
   - LICENSE
+  - purgecss.js
   - "*.config.js"
-  - package*.json
+  - "package*.json"
+  - _notes
 
 jekyll-archives:
   enabled: [categories, tags]
