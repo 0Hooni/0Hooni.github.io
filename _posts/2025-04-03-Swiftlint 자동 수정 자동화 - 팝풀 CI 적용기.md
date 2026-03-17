@@ -2,8 +2,8 @@
 title: "[Swift] Swiftlint 자동 수정 자동화 - 팝풀 CI 적용기"
 date: 2025-04-03 11:22 +0900
 categories:
-  - 🍎 iOS
-  - Swift
+  - Mobile
+  - iOS
 tags:
   - Swift
   - Project

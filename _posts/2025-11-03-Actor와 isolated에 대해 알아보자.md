@@ -2,7 +2,7 @@
 title: "[Swift] Actor와 isolated에 대해 알아보자"
 date: 2025-11-03 16:13 +0900
 categories:
-  - 🍎 iOS
+  - Language
   - Swift
 tags:
   - Swift

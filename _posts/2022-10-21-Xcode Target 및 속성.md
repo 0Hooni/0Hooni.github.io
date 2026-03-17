@@ -2,8 +2,8 @@
 title: "[Xcode] Target 및 속성"
 date: 2022-10-21 00:04:00 +0900
 categories:
-  - 🍎 iOS
-  - Xcode
+  - Mobile
+  - iOS
 tags:
   - Xcode
 ---

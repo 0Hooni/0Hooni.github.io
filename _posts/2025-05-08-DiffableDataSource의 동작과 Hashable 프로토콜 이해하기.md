@@ -2,8 +2,8 @@
 title: "[UIKit] DiffableDataSource의 동작과 Hashable 프로토콜 이해하기"
 date: 2025-05-08 14:36 +0900
 categories:
-  - 🍎 iOS
-  - UIKit
+  - Mobile
+  - iOS
 tags:
   - UIKit
   - Swift

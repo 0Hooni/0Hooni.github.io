@@ -2,7 +2,7 @@
 title: "[Unity] MonoBehaviour, 너 누구야?"
 date: 2023-03-12 13:17 +0900
 categories:
-  - 🎮 Game
+  - Game
   - Unity
 tags:
   - Unity

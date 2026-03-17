@@ -2,8 +2,8 @@
 title: "[Xcode] AppProject 및 속성"
 date: 2022-10-21 21:15 +0900
 categories:
-  - 🍎 iOS
-  - Xcode
+  - Mobile
+  - iOS
 tags:
   - Xcode
 ---

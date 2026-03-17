@@ -2,7 +2,7 @@
 title: "[Unity] 레트로의 유니티 1장 - 이게 Unity식 Hello world?!"
 date: 2023-02-16 07:13 +0900
 categories:
-  - 🎮 Game
+  - Game
   - Unity
 tags:
   - Unity

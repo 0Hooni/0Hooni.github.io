@@ -2,8 +2,8 @@
 title: "[SwiftUI] @State, @Binding 정리"
 date: 2024-01-26 01:04 +0900
 categories:
-  - 🍎 iOS
-  - SwiftUI
+  - Mobile
+  - iOS
 tags:
   - SwiftUI
 ---

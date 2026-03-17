@@ -2,8 +2,8 @@
 title: "[UIKit] Storyboard reference로 연결되면서 Tabbar의 Item이 설정되지 않는 문제 해결하기"
 date: 2024-08-31 00:41 +0900
 categories:
-  - 🍎 iOS
-  - UIKit
+  - Mobile
+  - iOS
 tags:
   - UIKit
   - Storyboard

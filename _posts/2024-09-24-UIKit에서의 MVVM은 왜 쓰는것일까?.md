@@ -2,8 +2,8 @@
 title: "[UIKit] UIKit에서의 MVVM은 왜 쓰는것일까?"
 date: 2024-09-24 01:08 +0900
 categories:
-  - 🍎 iOS
-  - UIKit
+  - Mobile
+  - iOS
 tags:
   - UIKit
   - Pattern

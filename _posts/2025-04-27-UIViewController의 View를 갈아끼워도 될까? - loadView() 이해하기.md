@@ -2,8 +2,8 @@
 title: "[UIKit] UIViewController의 View를 갈아끼워도 될까? - loadView() 이해하기"
 date: 2025-04-27 17:03 +0900
 categories:
-  - 🍎 iOS
-  - UIKit
+  - Mobile
+  - iOS
 tags:
   - UIKit
   - ViewController

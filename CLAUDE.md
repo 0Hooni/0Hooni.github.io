@@ -21,16 +21,12 @@ bundle exec jekyll build  # 빌드
 |--------|------|
 | `/learn [주제]` | 학습 세션 시작. 리서치 기반으로 주제 딥다이브 |
 | `/troubleshoot [문제]` | 트러블슈팅 세션 시작. 문제 분석 및 해결 |
-| `/write-post` | 대화 내용을 블로그 포스트로 작성 (3단계 프로세스) |
 
 ### 사용 플로우
 
 1. `/learn` 또는 `/troubleshoot`로 세션 시작
 2. 대화를 통해 학습/문제 해결 진행
-3. `/write-post`로 문서화 시작
-   - 1단계: 문서 유형 결정 (학습/이해/문제해결/참조)
-   - 2단계: 정보 구조 설계
-   - 3단계: 문장 다듬기
+3. 세션 완료 후 `/write-post`로 문서화 (유저 스코프 스킬)
 4. 최종 검토 후 커밋
 
 ## 포스트 작성
@@ -68,11 +64,20 @@ tags:
 
 | 상위 카테고리 | 하위 카테고리 |
 |-------------|-------------|
-| 🍎 iOS | Swift, UIKit, SwiftUI, Xcode |
-| 🎮 Game | Unity |
-| 🗂️ etc | Computer Science, Problem Solving |
-| ⛅️ Log | Boostcamp, 회고 |
-| 🌐 Cross Platform | ReactNative |
+| Mobile | iOS, Android, ReactNative |
+| Web | React, ... |
+| Backend | NestJS, SpringBoot, ... |
+| Game | Unity, ... |
+| Language | Swift, Kotlin, TypeScript, Go, ... |
+| DevOps | CI/CD, Docker, ... |
+| CS | ComputerScience, Algorithm, DataStructure, DesignPattern |
+| Log | Boostcamp, 회고, 후기 |
+
+## 지식 저장소
+
+- **위치**: `_notes/` (Jekyll 빌드 제외, 옵시디언 전용)
+- **용도**: 학습 로드맵, 주제별 노트, 지식 연결 (wikilink)
+- **구조**: `_notes/{카테고리}/{주제}/`
 
 ## Git 워크플로우
 
