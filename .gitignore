@@ -35,3 +35,6 @@ assets/js/dist
 # Obsidian
 .obsidian/
 Excalidraw
+
+# Claude Code
+.claude/settings.local.json
