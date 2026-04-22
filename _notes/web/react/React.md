@@ -12,6 +12,6 @@
 - [ ] Performance (memo, lazy, Suspense)
 
 ## Related
-- [[../../mobile/react-native/index|React Native]] — 모바일 확장
-- [[../../language/typescript/index|TypeScript]] — 개발 언어
-- [[../../backend/nestjs/index|NestJS]] — 백엔드 연동
+- [[React Native]] — 모바일 확장
+- [[TypeScript]] — 개발 언어
+- [[NestJS]] — 백엔드 연동

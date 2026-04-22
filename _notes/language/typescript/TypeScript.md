@@ -12,6 +12,6 @@ JavaScript에 타입 시스템을 추가한 언어
 - [ ] 타입 가드, 타입 좁히기
 
 ## Related
-- [[../../web/react/index|React]] — 프론트엔드
-- [[../../mobile/react-native/index|React Native]] — 모바일
-- [[../../backend/nestjs/index|NestJS]] — 백엔드
+- [[React]] — 프론트엔드
+- [[React Native]] — 모바일
+- [[NestJS]] — 백엔드

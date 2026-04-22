@@ -13,10 +13,10 @@ Expo 기반 크로스플랫폼 모바일 개발
 - [ ] Performance Optimization
 
 ## Related
-- [[../../web/react/index|React]] — 기반 프레임워크
-- [[../../language/typescript/index|TypeScript]] — 개발 언어
-- [[../ios/index|iOS]] — 네이티브 플랫폼
-- [[../android/index|Android]] — 네이티브 플랫폼
+- [[React]] — 기반 프레임워크
+- [[TypeScript]] — 개발 언어
+- [[iOS]] — 네이티브 플랫폼
+- [[Android]] — 네이티브 플랫폼
 
 ## Blog Posts
 - [[_posts/2025-10-16-QA 효율을 높이는 EAS 배포 워크플로우 구축기|EAS 배포 워크플로우 구축기]]

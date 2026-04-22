@@ -12,6 +12,6 @@ Kotlin 기반 Android 네이티브 앱 개발
 - [ ] Networking (Retrofit, Ktor)
 
 ## Related
-- [[../../language/kotlin/index|Kotlin]] — 개발 언어
-- [[../ios/index|iOS]] — 대응 플랫폼
-- [[../react-native/index|React Native]] — 크로스플랫폼 대안
+- [[Kotlin]] — 개발 언어
+- [[iOS]] — 대응 플랫폼
+- [[React Native]] — 크로스플랫폼 대안

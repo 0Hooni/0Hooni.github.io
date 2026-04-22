@@ -14,5 +14,5 @@ TypeScript 기반 Node.js 백엔드 프레임워크
 - [ ] Testing (Unit, E2E)
 
 ## Related
-- [[../../language/typescript/index|TypeScript]] — 개발 언어
-- [[../../web/react/index|React]] — 프론트엔드 연동
+- [[TypeScript]] — 개발 언어
+- [[React]] — 프론트엔드 연동

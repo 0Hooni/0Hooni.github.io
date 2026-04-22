@@ -14,7 +14,7 @@ Apple 플랫폼 개발 언어
 - [ ] Macro
 
 ## Related
-- [[../../mobile/ios/index|iOS]] — 주요 사용 플랫폼
+- [[iOS]] — 주요 사용 플랫폼
 
 ## Blog Posts
 - [[_posts/2024-08-22-Struct와 Class를 선택하는 애플의 기준|Struct와 Class를 선택하는 애플의 기준]]

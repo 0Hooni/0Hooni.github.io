@@ -11,4 +11,4 @@ JVM 기반 현대적 프로그래밍 언어
 - [ ] DSL
 
 ## Related
-- [[../../mobile/android/index|Android]] — 주요 사용 플랫폼
+- [[Android]] — 주요 사용 플랫폼

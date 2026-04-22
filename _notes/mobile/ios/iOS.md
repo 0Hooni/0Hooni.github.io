@@ -14,9 +14,9 @@ Swift 기반 iOS 네이티브 앱 개발
 - [ ] Testing 심화 (UI Test, Snapshot Test)
 
 ## Related
-- [[../../language/swift/index|Swift]] — 개발 언어
-- [[../react-native/index|React Native]] — 크로스플랫폼 대안
-- [[../android/index|Android]] — 대응 플랫폼
+- [[Swift]] — 개발 언어
+- [[React Native]] — 크로스플랫폼 대안
+- [[Android]] — 대응 플랫폼
 
 ## Blog Posts
 - UIKit: ViewController 생명주기, Storyboard, DiffableDataSource, loadView, MVVM, Bundle 이미지
