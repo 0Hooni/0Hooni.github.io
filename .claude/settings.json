@@ -1,3 +1,8 @@
 {
-  "enabledPlugins": {}
+  "enabledPlugins": {},
+  "skillOverrides": {
+    "teaching-mode": "user-invocable-only",
+    "troubleshoot": "user-invocable-only",
+    "write-post": "user-invocable-only"
+  }
 }
